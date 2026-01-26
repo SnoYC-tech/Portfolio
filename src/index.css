@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+/* Custom Tailwind Config */
+@theme {
+  --color-primary: #e6b319;
+  --color-background-light: #f8f7f6;
+  --color-background-dark: #000000;
+  --color-slate-shape: #334155;
+  --color-clay-shape: #78716c;
+  
+  --font-family-display: 'Manrope', sans-serif;
+  --font-family-body: 'Noto Sans', sans-serif;
+}
+
+/* Custom slow hover transition */
+.slow-hover {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-outline-hover:hover {
+  text-shadow: 0 0 1px currentColor;
+}

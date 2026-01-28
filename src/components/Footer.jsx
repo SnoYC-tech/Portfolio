@@ -9,7 +9,7 @@ const Footer = () => {
           Ready to build?
         </h2>
         <a
-          className="inline-block text-2xl md:text-3xl text-[#e6b319] border-b border-[#e6b319] pb-1 hover:text-white hover:border-white transition-colors duration-500 font-light"
+          className="inline-block text-2xl md:text-3xl text-[#2295f7] border-b border-[#2295f7] pb-1 hover:text-white hover:border-white transition-colors duration-500 font-light"
           href="#"
         >
           Initiate Project
@@ -19,13 +19,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto mt-32 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-white/20 text-xs tracking-widest uppercase">
         <p>SnoYC © 2026</p>
         <div className="flex gap-8 mt-4 md:mt-0">
-          <a className="hover:text-[#e6b319] transition-colors" href="#">
+          <a className="hover:text-[#2295f7] transition-colors" href="#">
             Instagram
           </a>
-          <a className="hover:text-[#e6b319] transition-colors" href="#">
+          <a className="hover:text-[#2295f7] transition-colors" href="#">
             LinkedIn
           </a>
-          <a className="hover:text-[#e6b319] transition-colors" href="#">
+          <a className="hover:text-[#2295f7] transition-colors" href="#">
             Twitter
           </a>
         </div>

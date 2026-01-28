@@ -7,8 +7,8 @@ const Hero = () => {
         {/* Text Content */}
         <div className="lg:col-span-7 flex flex-col gap-8 lg:pr-12 relative z-20">
           <div className="inline-flex items-center gap-3">
-            <span className="w-12 h-px bg-[#e6b319]"></span>
-            <span className="text-[#e6b319] text-xs font-bold tracking-[0.2em] uppercase">
+            <span className="w-12 h-px bg-[#2295f7]"></span>
+            <span className="text-[#2295f7] text-xs font-bold tracking-[0.2em] uppercase">
               Architecture of the Web
             </span>
           </div>
@@ -17,7 +17,7 @@ const Hero = () => {
             <span className="font-normal text-white">DIGITAL</span> <br />
             <span className="text-white/40">MONUMENTS</span>
           </h1>
-          <p className="text-white/60 text-lg font-light max-w-lg leading-relaxed mt-4 border-l border-[#e6b319]/30 pl-6">
+          <p className="text-white/60 text-lg font-light max-w-lg leading-relaxed mt-4 border-l border-[#2295f7]/30 pl-6">
             We architect digital experiences that stand the test of time. Precision
             engineering meets avant-garde aesthetics in a world of noise.
           </p>
@@ -43,8 +43,8 @@ const Hero = () => {
               className="absolute bottom-20 left-10 md:left-0 w-40 h-40 md:w-56 md:h-56 bg-stone-600 rounded-full shadow-2xl z-20 mix-blend-hard-light slow-hover hover:scale-105"
               aria-label="Abstract clay colored circle representing wholeness"
             ></div>
-            {/* Small Accent (Gold Line) */}
-            <div className="absolute top-[40%] right-[30%] w-32 h-[2px] bg-[#e6b319] z-30"></div>
+            {/* Small Accent (Blue Line) */}
+            <div className="absolute top-[40%] right-[30%] w-32 h-[2px] bg-[#2295f7] z-30"></div>
           </div>
         </div>
       </div>

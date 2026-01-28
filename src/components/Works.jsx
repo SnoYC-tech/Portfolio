@@ -31,7 +31,7 @@ const Works = () => {
               <h3 className="text-2xl font-light text-white group-hover:font-normal transition-all duration-700">
                 VANTAGE TOWERS
               </h3>
-              <p className="text-[#e6b319] text-xs tracking-widest uppercase mt-2">
+              <p className="text-[#2295f7] text-xs tracking-widest uppercase mt-2">
                 Real Estate / Web GL
               </p>
             </div>
@@ -47,7 +47,7 @@ const Works = () => {
                 aria-label="Abstract geometric composition representing project 2"
               ></div>
               <div
-                className="absolute bottom-10 left-10 w-24 h-24 border border-[#e6b319]/40 rounded-full"
+                className="absolute bottom-10 left-10 w-24 h-24 border border-[#2295f7]/40 rounded-full"
                 aria-label="Abstract geometric composition representing project 2"
               ></div>
             </div>
@@ -55,7 +55,7 @@ const Works = () => {
               <h3 className="text-2xl font-light text-white group-hover:font-normal transition-all duration-700">
                 OAK & IRON
               </h3>
-              <p className="text-[#e6b319] text-xs tracking-widest uppercase mt-2">
+              <p className="text-[#2295f7] text-xs tracking-widest uppercase mt-2">
                 Furniture / E-Commerce
               </p>
             </div>

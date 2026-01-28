@@ -17,12 +17,12 @@ const Expertise = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Card 1: Strategy */}
-          <div className="group relative p-8 border border-white/10 hover:border-[#e6b319]/50 transition-colors duration-700 bg-black">
+          <div className="group relative p-8 border border-white/10 hover:border-[#2295f7]/50 transition-colors duration-700 bg-black">
             <div className="h-40 mb-8 flex items-center justify-start">
               {/* Abstract Shape: Circle */}
-              <div className="w-24 h-24 rounded-full bg-stone-700 group-hover:bg-[#e6b319] transition-colors duration-700"></div>
+              <div className="w-24 h-24 rounded-full bg-stone-700 group-hover:bg-[#2295f7] transition-colors duration-700"></div>
             </div>
-            <h3 className="text-xl font-medium mb-3 group-hover:text-[#e6b319] transition-colors duration-500">
+            <h3 className="text-xl font-medium mb-3 group-hover:text-[#2295f7] transition-colors duration-500">
               Strategy
             </h3>
             <p className="text-white/40 text-sm font-light leading-relaxed">
@@ -32,12 +32,12 @@ const Expertise = () => {
           </div>
           
           {/* Card 2: Design */}
-          <div className="group relative p-8 border border-white/10 hover:border-[#e6b319]/50 transition-colors duration-700 bg-black">
+          <div className="group relative p-8 border border-white/10 hover:border-[#2295f7]/50 transition-colors duration-700 bg-black">
             <div className="h-40 mb-8 flex items-center justify-start">
               {/* Abstract Shape: Square */}
-              <div className="w-24 h-24 rounded-none bg-slate-600 group-hover:bg-[#e6b319] transition-colors duration-700"></div>
+              <div className="w-24 h-24 rounded-none bg-slate-600 group-hover:bg-[#2295f7] transition-colors duration-700"></div>
             </div>
-            <h3 className="text-xl font-medium mb-3 group-hover:text-[#e6b319] transition-colors duration-500">
+            <h3 className="text-xl font-medium mb-3 group-hover:text-[#2295f7] transition-colors duration-500">
               Design
             </h3>
             <p className="text-white/40 text-sm font-light leading-relaxed">
@@ -47,12 +47,12 @@ const Expertise = () => {
           </div>
           
           {/* Card 3: Engineering */}
-          <div className="group relative p-8 border border-white/10 hover:border-[#e6b319]/50 transition-colors duration-700 bg-black">
+          <div className="group relative p-8 border border-white/10 hover:border-[#2295f7]/50 transition-colors duration-700 bg-black">
             <div className="h-40 mb-8 flex items-center justify-start">
               {/* Abstract Shape: Triangle */}
-              <div className="w-0 h-0 border-l-[50px] border-r-[50px] border-b-[86px] border-l-transparent border-r-transparent border-b-stone-500 group-hover:border-b-[#e6b319] transition-colors duration-700"></div>
+              <div className="w-0 h-0 border-l-[50px] border-r-[50px] border-b-[86px] border-l-transparent border-r-transparent border-b-stone-500 group-hover:border-b-[#2295f7] transition-colors duration-700"></div>
             </div>
-            <h3 className="text-xl font-medium mb-3 group-hover:text-[#e6b319] transition-colors duration-500">
+            <h3 className="text-xl font-medium mb-3 group-hover:text-[#2295f7] transition-colors duration-500">
               Engineering
             </h3>
             <p className="text-white/40 text-sm font-light leading-relaxed">

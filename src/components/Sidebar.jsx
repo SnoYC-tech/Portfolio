@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <aside className="w-full md:w-64 md:h-screen md:fixed md:left-0 top-0 z-50 bg-black/95 backdrop-blur-sm border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-between p-8 shrink-0">
@@ -14,47 +17,83 @@ const Sidebar = () => {
         <nav className="hidden md:flex flex-col gap-6 mt-12">
           <Link
             to="/"
-            className="group flex items-center gap-4 text-white/50 hover:text-[#2295f7] transition-colors duration-500"
+            className={`group flex items-center gap-4 transition-all duration-500 relative ${
+              isActive('/') 
+                ? 'text-[#2295f7]' 
+                : 'text-white/80 hover:text-[#2295f7] hover:bg-white/5'
+            } rounded-lg px-3 py-2 -mx-3`}
           >
-            <span className="text-xs font-medium tracking-widest uppercase opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
+            <span className={`text-xs font-medium tracking-widest uppercase transition-all duration-500 ${
+              isActive('/') 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0'
+            }`}>
               01
             </span>
             <span className="text-sm tracking-widest uppercase group-hover:pl-2 transition-all duration-500">
               Home
             </span>
+            {isActive('/') && <span className="absolute left-0 w-1 h-full bg-[#2295f7] rounded-r"></span>}
           </Link>
           <Link
             to="/about"
-            className="group flex items-center gap-4 text-white/50 hover:text-[#2295f7] transition-colors duration-500"
+            className={`group flex items-center gap-4 transition-all duration-500 relative ${
+              isActive('/about') 
+                ? 'text-[#2295f7]' 
+                : 'text-white/80 hover:text-[#2295f7] hover:bg-white/5'
+            } rounded-lg px-3 py-2 -mx-3`}
           >
-            <span className="text-xs font-medium tracking-widest uppercase opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
+            <span className={`text-xs font-medium tracking-widest uppercase transition-all duration-500 ${
+              isActive('/about') 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0'
+            }`}>
               02
             </span>
             <span className="text-sm tracking-widest uppercase group-hover:pl-2 transition-all duration-500">
               About
             </span>
+            {isActive('/about') && <span className="absolute left-0 w-1 h-full bg-[#2295f7] rounded-r"></span>}
           </Link>
           <Link
             to="/services"
-            className="group flex items-center gap-4 text-white/50 hover:text-[#2295f7] transition-colors duration-500"
+            className={`group flex items-center gap-4 transition-all duration-500 relative ${
+              isActive('/services') 
+                ? 'text-[#2295f7]' 
+                : 'text-white/80 hover:text-[#2295f7] hover:bg-white/5'
+            } rounded-lg px-3 py-2 -mx-3`}
           >
-            <span className="text-xs font-medium tracking-widest uppercase opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
+            <span className={`text-xs font-medium tracking-widest uppercase transition-all duration-500 ${
+              isActive('/services') 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0'
+            }`}>
               03
             </span>
             <span className="text-sm tracking-widest uppercase group-hover:pl-2 transition-all duration-500">
               Services
             </span>
+            {isActive('/services') && <span className="absolute left-0 w-1 h-full bg-[#2295f7] rounded-r"></span>}
           </Link>
           <Link
             to="/contact"
-            className="group flex items-center gap-4 text-white/50 hover:text-[#2295f7] transition-colors duration-500"
+            className={`group flex items-center gap-4 transition-all duration-500 relative ${
+              isActive('/contact') 
+                ? 'text-[#2295f7]' 
+                : 'text-white/80 hover:text-[#2295f7] hover:bg-white/5'
+            } rounded-lg px-3 py-2 -mx-3`}
           >
-            <span className="text-xs font-medium tracking-widest uppercase opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
+            <span className={`text-xs font-medium tracking-widest uppercase transition-all duration-500 ${
+              isActive('/contact') 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0'
+            }`}>
               04
             </span>
             <span className="text-sm tracking-widest uppercase group-hover:pl-2 transition-all duration-500">
               Contact
             </span>
+            {isActive('/contact') && <span className="absolute left-0 w-1 h-full bg-[#2295f7] rounded-r"></span>}
           </Link>
         </nav>
       </div>

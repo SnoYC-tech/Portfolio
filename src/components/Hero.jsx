@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -7,8 +8,8 @@ const Hero = () => {
         {/* Text Content */}
         <div className="lg:col-span-7 flex flex-col gap-8 lg:pr-12 relative z-20">
           <div className="inline-flex items-center gap-3">
-            <span className="w-12 h-px bg-[#2295f7]"></span>
-            <span className="text-[#2295f7] text-xs font-bold tracking-[0.2em] uppercase">
+            <span className="w-12 h-px bg-primary"></span>
+            <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               Architecture of the Web
             </span>
           </div>
@@ -17,14 +18,38 @@ const Hero = () => {
             <span className="font-normal text-white">DIGITAL</span> <br />
             <span className="text-white/40">MONUMENTS</span>
           </h1>
-          <p className="text-white/60 text-lg font-light max-w-lg leading-relaxed mt-4 border-l border-[#2295f7]/30 pl-6">
+          <p className="text-white/60 text-lg font-light max-w-lg leading-relaxed mt-4 border-l border-primary/30 pl-6">
             We architect digital experiences that stand the test of time. Precision
             engineering meets avant-garde aesthetics in a world of noise.
           </p>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+            <a 
+              href="#works"
+              className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-white font-medium text-sm tracking-wider uppercase overflow-hidden transition-all duration-500 hover:bg-[#1a75c7] hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02]"
+            >
+              <span className="relative z-10">View Work</span>
+              <svg className="w-5 h-5 relative z-10 transition-transform duration-500 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+              <div className="absolute inset-0 bg-linear-to-r from-primary to-[#1a75c7] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </a>
+            
+            <Link 
+              to="/contact"
+              className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-white/20 text-white font-medium text-sm tracking-wider uppercase transition-all duration-500 hover:border-primary hover:bg-primary/10 hover:scale-[1.02]"
+            >
+              <span className="relative z-10">Get in Touch</span>
+              <svg className="w-5 h-5 relative z-10 transition-transform duration-500 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
         </div>
         
         {/* Abstract Geometric Composition */}
-        <div className="lg:col-span-5 relative h-[400px] md:h-[600px] w-full flex items-center justify-center">
+        <div className="lg:col-span-5 relative h-100 md:h-150 w-full flex items-center justify-center">
           {/* Abstract Background Decoration */}
           <div className="absolute inset-0 flex items-center justify-center opacity-80">
             {/* Large Slate Circle */}
@@ -44,7 +69,7 @@ const Hero = () => {
               aria-label="Abstract clay colored circle representing wholeness"
             ></div>
             {/* Small Accent (Blue Line) */}
-            <div className="absolute top-[40%] right-[30%] w-32 h-[2px] bg-[#2295f7] z-30"></div>
+            <div className="absolute top-[40%] right-[30%] w-32 h-0.5 bg-primary z-30"></div>
           </div>
         </div>
       </div>

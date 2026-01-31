@@ -52,7 +52,7 @@ const Contact = () => {
       </motion.section>
 
       {/* Contact Form & Info Section */}
-      <section className="py-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 border-b border-white/5">
+      <section id='#form' className="py-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 border-b border-white/5">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-14 lg:gap-16">
           {/* Contact Information */}
           <motion.div 

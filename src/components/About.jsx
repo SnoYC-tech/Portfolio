@@ -262,22 +262,6 @@ const About = () => {
                     </motion.div>
                 </div>
             </section>
-
-            {/* CTA Section */ }
-            <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32">
-                <div className="max-w-7xl mx-auto text-center">
-                    <p className="text-white/40 text-xs md:text-sm tracking-widest uppercase mb-6 md:mb-8">Let's Work Together</p>
-                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-thin tracking-tight text-white mb-8 md:mb-12">
-                        Have a project in mind?
-                    </h2>
-                    <a
-                        className="inline-block text-xl md:text-2xl lg:text-3xl text-[#2295f7] border-b border-[#2295f7] pb-1 lg:hover:text-white lg:hover:border-white transition-colors duration-500 font-light"
-                        href="#contact"
-                    >
-                        Start a Conversation
-                    </a>
-                </div>
-            </section>
         </div>
     );
 };

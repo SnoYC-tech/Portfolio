@@ -58,8 +58,10 @@ const Expertise = () => {
             variants={cardVariants}
           >
             <div className="h-32 md:h-40 mb-6 md:mb-8 flex items-center justify-start">
-              {/* Abstract Shape: Circle */}
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-stone-700 lg:group-hover:bg-[#2295f7] transition-colors duration-700"></div>
+              {/* Strategy Icon: Compass */}
+              <svg className="w-20 h-20 md:w-24 md:h-24 stroke-stone-700 lg:group-hover:stroke-[#2295f7] transition-colors duration-700" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+              </svg>
             </div>
             <h3 className="text-lg md:text-xl font-medium mb-3 lg:group-hover:text-[#2295f7] transition-colors duration-500">
               Strategy
@@ -76,8 +78,10 @@ const Expertise = () => {
             variants={cardVariants}
           >
             <div className="h-32 md:h-40 mb-6 md:mb-8 flex items-center justify-start">
-              {/* Abstract Shape: Square */}
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-none bg-slate-600 lg:group-hover:bg-[#2295f7] transition-colors duration-700"></div>
+              {/* Design Icon: Pen Tool */}
+              <svg className="w-20 h-20 md:w-24 md:h-24 stroke-slate-600 lg:group-hover:stroke-[#2295f7] transition-colors duration-700" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+              </svg>
             </div>
             <h3 className="text-lg md:text-xl font-medium mb-3 lg:group-hover:text-[#2295f7] transition-colors duration-500">
               Design
@@ -94,8 +98,10 @@ const Expertise = () => {
             variants={cardVariants}
           >
             <div className="h-32 md:h-40 mb-6 md:mb-8 flex items-center justify-start">
-              {/* Abstract Shape: Triangle */}
-              <div className="w-0 h-0 border-l-[40px] md:border-l-[50px] border-r-[40px] md:border-r-[50px] border-b-[69px] md:border-b-[86px] border-l-transparent border-r-transparent border-b-stone-500 lg:group-hover:border-b-[#2295f7] transition-colors duration-700"></div>
+              {/* Engineering Icon: Code Brackets */}
+              <svg className="w-20 h-20 md:w-24 md:h-24 stroke-stone-500 lg:group-hover:stroke-[#2295f7] transition-colors duration-700" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
             </div>
             <h3 className="text-lg md:text-xl font-medium mb-3 lg:group-hover:text-[#2295f7] transition-colors duration-500">
               Engineering

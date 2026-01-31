@@ -10,7 +10,7 @@ const Footer = () => {
         </h2>
         <a
           className="inline-block text-2xl md:text-3xl text-[#2295f7] border-b border-[#2295f7] pb-1 hover:text-white hover:border-white transition-colors duration-500 font-light"
-          href="#"
+          href="/contact"
         >
           Initiate Project
         </a>

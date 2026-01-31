@@ -60,7 +60,7 @@ const Sidebar = () => {
               <span className="text-xs font-medium tracking-widest uppercase">01</span>
               <span className="text-base tracking-widest uppercase">Home</span>
             </Link>
-            {/* <Link
+            <Link
               to="/about"
               onClick={handleLinkClick}
               className={`flex items-center gap-4 px-4 py-4 transition-all duration-300 ${
@@ -71,7 +71,7 @@ const Sidebar = () => {
             >
               <span className="text-xs font-medium tracking-widest uppercase">02</span>
               <span className="text-base tracking-widest uppercase">About</span>
-            </Link> */}
+            </Link>
             <Link
               to="/services"
               onClick={handleLinkClick}

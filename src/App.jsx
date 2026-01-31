@@ -25,7 +25,7 @@ const App = () => {
         <main className="flex-1 pt-[65px] md:pt-0 md:ml-64 relative z-10 w-full overflow-hidden">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/about" element={<AboutPage />} /> */}
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex flex-col justify-center relative py-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 border-b border-white/5 overflow-hidden">
+    <section id="hero" className="min-h-screen flex flex-col justify-center relative pt-6 pb-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 border-b border-white/5 overflow-hidden">
       <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-24 items-center">
         {/* Text Content */}
         <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8 lg:pr-12 relative z-20">

@@ -1,30 +1,56 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex flex-col justify-center relative pt-6 pb-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 border-b border-white/5 overflow-hidden">
       <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-24 items-center">
         {/* Text Content */}
-        <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8 lg:pr-12 relative z-20">
-          <div className="inline-flex items-center gap-3">
+        <motion.div 
+          className="lg:col-span-7 flex flex-col gap-6 md:gap-8 lg:pr-12 relative z-20"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div 
+            className="inline-flex items-center gap-3"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <span className="w-8 md:w-12 h-px bg-primary"></span>
             <span className="text-primary text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
               Architecture of the Web
             </span>
-          </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-[0.9] tracking-tight text-white mix-blend-difference">
+          </motion.div>
+          <motion.h1 
+            className="text-5xl md:text-7xl lg:text-8xl font-thin leading-[0.9] tracking-tight text-white mix-blend-difference"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
             BUILDING <br />
             <span className="font-normal text-white">DIGITAL</span> <br />
             <span className="text-white/40">MONUMENTS</span>
-          </h1>
-          <p className="text-white/60 text-base md:text-lg font-light max-w-lg leading-relaxed mt-2 md:mt-4 border-l border-primary/30 pl-4 md:pl-6">
+          </motion.h1>
+          <motion.p 
+            className="text-white/60 text-base md:text-lg font-light max-w-lg leading-relaxed mt-2 md:mt-4 border-l border-primary/30 pl-4 md:pl-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+          >
             We architect digital experiences that stand the test of time. Precision
             engineering meets avant-garde aesthetics in a world of noise.
-          </p>
+          </motion.p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-4 md:mt-6">
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 mt-4 md:mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.7 }}
+          >
             <a 
               href="#works"
               className="group relative inline-flex items-center justify-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-primary text-white font-medium text-sm tracking-wider uppercase overflow-hidden transition-all duration-500 lg:hover:bg-[#1a75c7] lg:hover:shadow-lg lg:hover:shadow-primary/30 lg:hover:scale-[1.02]"
@@ -45,11 +71,16 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         
         {/* Abstract Geometric Composition */}
-        <div className="hidden lg:flex lg:col-span-5 relative lg:h-[500px] w-full items-center justify-center">
+        <motion.div 
+          className="hidden lg:flex lg:col-span-5 relative lg:h-[500px] w-full items-center justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
           {/* Abstract Background Decoration */}
           <div className="absolute inset-0 flex items-center justify-center opacity-80">
             {/* Large Slate Circle */}
@@ -71,7 +102,7 @@ const Hero = () => {
             {/* Small Accent (Blue Line) */}
             <div className="absolute top-[40%] right-[30%] w-32 h-0.5 bg-primary z-30"></div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

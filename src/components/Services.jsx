@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const services = [
@@ -72,33 +73,58 @@ const Services = () => {
       {/* Hero Section */}
       <section className="min-h-[60vh] flex flex-col justify-center relative py-16 md:py-24 lg:pt-32 lg:pb-20 px-6 md:px-20 lg:px-32 border-b border-white/5">
         <div className="max-w-7xl w-full mx-auto">
-          <div className="inline-flex items-center gap-3 mb-6 md:mb-8">
+          <motion.div 
+            className="inline-flex items-center gap-3 mb-6 md:mb-8"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <span className="w-8 md:w-12 h-px bg-[#2295f7]"></span>
             <span className="text-[#2295f7] text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
               What We Do
             </span>
-          </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-[0.9] tracking-tight mb-8 md:mb-12">
+          </motion.div>
+          <motion.h1 
+            className="text-5xl md:text-7xl lg:text-8xl font-thin leading-[0.9] tracking-tight mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             COMPREHENSIVE<br />
             <span className="font-normal">DIGITAL</span><br />
             <span className="text-white/40">SERVICES</span>
-          </h1>
-          <p className="text-white/60 text-base md:text-lg lg:text-xl font-light max-w-3xl leading-relaxed border-l border-[#2295f7]/30 pl-4 md:pl-6">
+          </motion.h1>
+          <motion.p 
+            className="text-white/60 text-base md:text-lg lg:text-xl font-light max-w-3xl leading-relaxed border-l border-[#2295f7]/30 pl-4 md:pl-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             Three core disciplines working in harmony. Each service is designed to complement 
             the others, creating a seamless workflow from concept to launch.
-          </p>
+          </motion.p>
         </div>
       </section>
 
       {/* Services Overview */}
       {services.map((service, index) => (
-        <section 
+        <motion.section 
           key={service.id}
           className={`py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32 border-b border-white/5 ${index % 2 === 1 ? 'bg-white/[0.02]' : ''}`}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           <div className="max-w-7xl mx-auto">
             {/* Service Header */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-12 md:mb-16">
+            <motion.div 
+              className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-12 md:mb-16"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <div className="flex-1">
                 <div className="flex items-baseline gap-3 md:gap-4 mb-3 md:mb-4">
                   <span className="text-5xl md:text-6xl lg:text-7xl font-thin text-[#2295f7]">{service.id}</span>
@@ -106,17 +132,29 @@ const Services = () => {
                 </div>
                 <p className="text-[#2295f7] text-xs md:text-sm tracking-[0.2em] uppercase">{service.tagline}</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Service Description */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16">
-              <div className="lg:col-span-5">
+              <motion.div 
+                className="lg:col-span-5"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <p className="text-lg md:text-xl font-light leading-relaxed text-white/80">
                   {service.description}
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="lg:col-span-7 space-y-8 md:space-y-12">
+              <motion.div 
+                className="lg:col-span-7 space-y-8 md:space-y-12"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
                 {/* Capabilities */}
                 <div>
                   <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-4 md:mb-6 flex items-center gap-3">
@@ -156,20 +194,38 @@ const Services = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
       ))}
 
       {/* Process Section */}
       <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32 border-b border-white/5 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-thin tracking-tight mb-12 md:mb-16 lg:mb-20">
+          <motion.h2 
+            className="text-3xl md:text-5xl lg:text-6xl font-thin tracking-tight mb-12 md:mb-16 lg:mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             OUR <span className="text-white/40">PROCESS</span>
-          </h2>
+          </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.2
+                }
+              }
+            }}
+          >
             {[
               {
                 step: '01',
@@ -192,7 +248,18 @@ const Services = () => {
                 description: 'Smooth deployment with comprehensive testing, followed by ongoing support and optimization.'
               }
             ].map((phase, index) => (
-              <div key={index} className="relative">
+              <motion.div 
+                key={index} 
+                className="relative"
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.6 }
+                  }
+                }}
+              >
                 <div className="text-4xl md:text-5xl font-thin text-[#2295f7]/20 mb-3 md:mb-4">{phase.step}</div>
                 <h3 className="text-xl md:text-2xl font-light mb-3 md:mb-4 text-white">{phase.title}</h3>
                 <p className="text-sm md:text-base text-white/60 font-light leading-relaxed">{phase.description}</p>
@@ -201,16 +268,22 @@ const Services = () => {
                 {index < 3 && (
                   <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-white/10"></div>
                 )}
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Technology Stack */}
       <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32 border-b border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+          <motion.div 
+            className="text-center mb-12 md:mb-16 lg:mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-thin tracking-tight mb-4 md:mb-6">
               TECHNOLOGY <span className="text-white/40">STACK</span>
             </h2>
@@ -218,42 +291,86 @@ const Services = () => {
               We work with modern, battle-tested technologies that deliver performance, 
               scalability, and maintainability.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.05
+                }
+              }
+            }}
+          >
             {[
               'React', 'Next.js', 'Vue.js', 'TypeScript',
               'Node.js', 'Python', 'PostgreSQL', 'MongoDB',
               'AWS', 'Vercel', 'Docker', 'Git',
               'Figma', 'Tailwind CSS', 'Framer Motion', 'WebGL'
             ].map((tech, index) => (
-              <div 
+              <motion.div 
                 key={index}
                 className="group p-4 md:p-6 border border-white/10 lg:hover:border-[#2295f7]/50 transition-colors duration-500 text-center"
+                variants={{
+                  hidden: { opacity: 0, scale: 0.9 },
+                  visible: {
+                    opacity: 1,
+                    scale: 1,
+                    transition: { duration: 0.4 }
+                  }
+                }}
               >
                 <span className="text-sm md:text-base text-white/70 font-light tracking-wide lg:group-hover:text-white transition-colors duration-500">
                   {tech}
                 </span>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-white/40 text-xs md:text-sm tracking-widest uppercase mb-6 md:mb-8">Ready to Start?</p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-thin tracking-tight text-white mb-8 md:mb-12">
+        <motion.div 
+          className="max-w-7xl mx-auto text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.p 
+            className="text-white/40 text-xs md:text-sm tracking-widest uppercase mb-6 md:mb-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Ready to Start?
+          </motion.p>
+          <motion.h2 
+            className="text-4xl md:text-6xl lg:text-7xl font-thin tracking-tight text-white mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             Let's discuss your project
-          </h2>
-          <a
+          </motion.h2>
+          <motion.a
             href="/contact"
             className="inline-block text-xl md:text-2xl lg:text-3xl text-[#2295f7] border-b border-[#2295f7] pb-1 lg:hover:text-white lg:hover:border-white transition-colors duration-500 font-light"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
           >
             Get In Touch
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </section>
     </div>
   );

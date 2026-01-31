@@ -1,9 +1,16 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Philosophy = () => {
   return (
     <section className="py-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 border-b border-white/5" id="philosophy">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+      <motion.div 
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7 }}
+      >
         <div className="md:col-span-4">
           <h2 className="text-[#2295f7] text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-4 flex items-center gap-3 md:gap-4">
             <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,7 +37,7 @@ const Philosophy = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

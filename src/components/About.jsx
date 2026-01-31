@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
     const teamMembers = [
@@ -77,16 +78,47 @@ const About = () => {
             {/* Team Grid */ }
             <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32 border-b border-white/5">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex items-center gap-4 mb-12 md:mb-16 lg:mb-20">
+                    <motion.div 
+                        className="flex items-center gap-4 mb-12 md:mb-16 lg:mb-20"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <span className="w-8 md:w-16 h-px bg-white/20"></span>
                         <h2 className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-white/50">
                             The Team
                         </h2>
-                    </div>
+                    </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-16">
+                    <motion.div 
+                        className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-16"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: {
+                                    staggerChildren: 0.2
+                                }
+                            }
+                        }}
+                    >
                         { teamMembers.map((member, index) => (
-                            <div key={ index } className="group">
+                            <motion.div 
+                                key={ index } 
+                                className="group"
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: {
+                                        opacity: 1,
+                                        y: 0,
+                                        transition: { duration: 0.6 }
+                                    }
+                                }}
+                            >
                                 {/* Profile Image */ }
                                 <div className="w-full aspect-square bg-neutral-900 relative overflow-hidden mb-4 md:mb-6 border border-white/10 lg:group-hover:border-[#2295f7]/50 transition-colors duration-700">
                                     <img
@@ -122,52 +154,112 @@ const About = () => {
                                         )) }
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         )) }
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* Values Section */ }
             <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32 border-b border-white/5 bg-white/[0.02]">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-thin tracking-tight mb-12 md:mb-16 lg:mb-20">
+                    <motion.h2 
+                        className="text-3xl md:text-5xl lg:text-6xl font-thin tracking-tight mb-12 md:mb-16 lg:mb-20"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         CORE <span className="text-white/40">VALUES</span>
-                    </h2>
+                    </motion.h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16">
-                        <div className="border-l border-[#2295f7]/30 pl-6 md:pl-8">
+                    <motion.div 
+                        className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: {
+                                    staggerChildren: 0.15
+                                }
+                            }
+                        }}
+                    >
+                        <motion.div 
+                            className="border-l border-[#2295f7]/30 pl-6 md:pl-8"
+                            variants={{
+                                hidden: { opacity: 0, x: -20 },
+                                visible: {
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: { duration: 0.6 }
+                                }
+                            }}
+                        >
                             <h3 className="text-xl md:text-2xl font-light mb-3 md:mb-4 text-white">Craftsmanship</h3>
                             <p className="text-sm md:text-base text-white/60 font-light leading-relaxed">
                                 We treat every project as a craft, not a commodity. Attention to detail
                                 isn't optional—it's the foundation of everything we build.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="border-l border-white/20 pl-6 md:pl-8">
+                        <motion.div 
+                            className="border-l border-white/20 pl-6 md:pl-8"
+                            variants={{
+                                hidden: { opacity: 0, x: -20 },
+                                visible: {
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: { duration: 0.6 }
+                                }
+                            }}
+                        >
                             <h3 className="text-xl md:text-2xl font-light mb-3 md:mb-4 text-white">Clarity</h3>
                             <p className="text-sm md:text-base text-white/60 font-light leading-relaxed">
                                 Complex problems deserve simple solutions. We cut through noise to
                                 deliver experiences that are intuitive and purposeful.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="border-l border-white/20 pl-6 md:pl-8">
+                        <motion.div 
+                            className="border-l border-white/20 pl-6 md:pl-8"
+                            variants={{
+                                hidden: { opacity: 0, x: -20 },
+                                visible: {
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: { duration: 0.6 }
+                                }
+                            }}
+                        >
                             <h3 className="text-xl md:text-2xl font-light mb-3 md:mb-4 text-white">Collaboration</h3>
                             <p className="text-sm md:text-base text-white/60 font-light leading-relaxed">
                                 Your vision is our blueprint. We work alongside you as partners,
                                 not vendors, ensuring alignment at every stage.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="border-l border-white/20 pl-6 md:pl-8">
+                        <motion.div 
+                            className="border-l border-white/20 pl-6 md:pl-8"
+                            variants={{
+                                hidden: { opacity: 0, x: -20 },
+                                visible: {
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: { duration: 0.6 }
+                                }
+                            }}
+                        >
                             <h3 className="text-xl md:text-2xl font-light mb-3 md:mb-4 text-white">Commitment</h3>
                             <p className="text-sm md:text-base text-white/60 font-light leading-relaxed">
                                 We take on fewer projects to deliver more value. When we commit,
                                 we see it through with unwavering dedication.
                             </p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
 

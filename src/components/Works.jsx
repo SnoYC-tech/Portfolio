@@ -1,20 +1,58 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Works = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const projectVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32 border-b border-white/5" id="works">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-4 mb-12 md:mb-16">
+        <motion.div 
+          className="flex items-center gap-4 mb-12 md:mb-16"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="w-8 md:w-16 h-px bg-white/20"></span>
           <h2 className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-white/50">
             Selected Works
           </h2>
-        </div>
+        </motion.div>
         
         {/* Asymmetrical Grid of Works */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-24">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-24"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {/* Project 1 */}
-          <div className="group cursor-pointer">
+          <motion.div 
+            className="group cursor-pointer"
+            variants={projectVariants}
+          >
             <div className="w-full aspect-[4/3] bg-neutral-800 relative overflow-hidden mb-6 rounded-lg">
               <div className="absolute inset-0 bg-slate-800 opacity-50 lg:group-hover:opacity-40 transition-opacity duration-700"></div>
               {/* Abstract Composition for Project Thumb */}
@@ -35,10 +73,13 @@ const Works = () => {
                 Real Estate / Web GL
               </p>
             </div>
-          </div>
+          </motion.div>
           
           {/* Project 2 (Offset top only on desktop) */}
-          <div className="group cursor-pointer mt-0 lg:mt-32">
+          <motion.div 
+            className="group cursor-pointer mt-0 lg:mt-32"
+            variants={projectVariants}
+          >
             <div className="w-full aspect-[4/3] bg-neutral-800 relative overflow-hidden mb-6 rounded-lg">
               <div className="absolute inset-0 bg-stone-900 opacity-60 lg:group-hover:opacity-40 transition-opacity duration-700"></div>
               {/* Abstract Composition for Project Thumb */}
@@ -59,8 +100,8 @@ const Works = () => {
                 Furniture / E-Commerce
               </p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

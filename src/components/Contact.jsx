@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,12 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center relative py-16 md:py-24 lg:pt-32 lg:pb-20 px-6 md:px-20 lg:px-32 border-b border-white/5">
+      <motion.section 
+        className="min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center relative py-16 md:py-24 lg:pt-32 lg:pb-20 px-6 md:px-20 lg:px-32 border-b border-white/5"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-7xl w-full mx-auto">
           <div className="inline-flex items-center gap-3 mb-6 md:mb-8">
             <span className="w-8 md:w-12 h-px bg-[#2295f7]"></span>
@@ -43,13 +49,19 @@ const Contact = () => {
             and collaborations. Let's start a conversation.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Form & Info Section */}
       <section className="py-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 border-b border-white/5">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-14 lg:gap-16">
           {/* Contact Information */}
-          <div className="lg:col-span-5">
+          <motion.div 
+            className="lg:col-span-5"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
             <h2 className="text-2xl md:text-3xl font-light mb-8 md:mb-12">Contact Information</h2>
             
             <div className="space-y-6 md:space-y-8">
@@ -105,10 +117,16 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-7">
+          <motion.div 
+            className="lg:col-span-7"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
             <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
               <div>
                 <label htmlFor="name" className="block text-xs tracking-[0.2em] uppercase text-white/50 mb-3">
@@ -191,12 +209,18 @@ const Contact = () => {
                 </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Response Time Section */}
-      <section className="py-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 bg-white/[0.02]">
+      <motion.section 
+        className="py-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 bg-white/[0.02]"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           <div className="text-center md:text-left">
             <div className="text-4xl md:text-5xl font-thin text-[#2295f7] mb-3 md:mb-4">1h</div>
@@ -217,7 +241,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

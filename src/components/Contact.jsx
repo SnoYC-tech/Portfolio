@@ -25,20 +25,20 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="min-h-[60vh] flex flex-col justify-center relative pt-32 pb-20 px-6 md:px-20 lg:px-32 border-b border-white/5">
+      <section className="min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center relative py-16 md:py-24 lg:pt-32 lg:pb-20 px-6 md:px-20 lg:px-32 border-b border-white/5">
         <div className="max-w-7xl w-full mx-auto">
-          <div className="inline-flex items-center gap-3 mb-8">
-            <span className="w-12 h-px bg-[#2295f7]"></span>
-            <span className="text-[#2295f7] text-xs font-bold tracking-[0.2em] uppercase">
+          <div className="inline-flex items-center gap-3 mb-6 md:mb-8">
+            <span className="w-8 md:w-12 h-px bg-[#2295f7]"></span>
+            <span className="text-[#2295f7] text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
               Get In Touch
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-[0.9] tracking-tight mb-12">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-[0.9] tracking-tight mb-8 md:mb-12">
             LET'S BUILD<br />
             <span className="font-normal">SOMETHING</span><br />
             <span className="text-white/40">REMARKABLE</span>
           </h1>
-          <p className="text-white/60 text-xl font-light max-w-3xl leading-relaxed border-l border-[#2295f7]/30 pl-6">
+          <p className="text-white/60 text-base md:text-lg lg:text-xl font-light max-w-3xl leading-relaxed border-l border-[#2295f7]/30 pl-4 md:pl-6">
             Have a project in mind? We're always interested in hearing about new opportunities 
             and collaborations. Let's start a conversation.
           </p>
@@ -46,18 +46,18 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info Section */}
-      <section className="py-24 px-6 md:px-20 lg:px-32 border-b border-white/5">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <section className="py-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 border-b border-white/5">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-14 lg:gap-16">
           {/* Contact Information */}
           <div className="lg:col-span-5">
-            <h2 className="text-3xl font-light mb-12">Contact Information</h2>
+            <h2 className="text-2xl md:text-3xl font-light mb-8 md:mb-12">Contact Information</h2>
             
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <div className="group">
                 <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-2">Email</h3>
                 <a 
                   href="mailto:snoyc.tech@gmail.com" 
-                  className="text-xl font-light text-white hover:text-[#2295f7] transition-colors duration-500 inline-block"
+                  className="text-lg md:text-xl font-light text-white lg:hover:text-[#2295f7] transition-colors duration-500 inline-block break-all"
                 >
                   snoyc.tech@gmail.com
                 </a>
@@ -67,7 +67,7 @@ const Contact = () => {
                 <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-2">Phone</h3>
                 <a 
                   href="tel:+1234567890" 
-                  className="text-xl font-light text-white hover:text-[#2295f7] transition-colors duration-500 inline-block"
+                  className="text-lg md:text-xl font-light text-white lg:hover:text-[#2295f7] transition-colors duration-500 inline-block"
                 >
                   +1 (234) 567-890
                 </a>
@@ -75,30 +75,30 @@ const Contact = () => {
 
               <div className="group">
                 <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-2">Location</h3>
-                <p className="text-xl font-light text-white/80">
+                <p className="text-lg md:text-xl font-light text-white/80">
                   Pune<br />
-                  <span className="text-base text-white/50">Working Globally</span>
+                  <span className="text-sm md:text-base text-white/50">Working Globally</span>
                 </p>
               </div>
 
-              <div className="pt-8 border-t border-white/10">
+              <div className="pt-6 md:pt-8 border-t border-white/10">
                 <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-4">Follow Us</h3>
-                <div className="flex gap-6">
+                <div className="flex flex-wrap gap-4 md:gap-6">
                   <a 
                     href="#" 
-                    className="text-white/50 hover:text-[#2295f7] transition-colors duration-500 text-sm tracking-widest uppercase"
+                    className="text-white/50 lg:hover:text-[#2295f7] transition-colors duration-500 text-sm tracking-widest uppercase"
                   >
                     Instagram
                   </a>
                   <a 
                     href="#" 
-                    className="text-white/50 hover:text-[#2295f7] transition-colors duration-500 text-sm tracking-widest uppercase"
+                    className="text-white/50 lg:hover:text-[#2295f7] transition-colors duration-500 text-sm tracking-widest uppercase"
                   >
                     LinkedIn
                   </a>
                   <a 
                     href="#" 
-                    className="text-white/50 hover:text-[#2295f7] transition-colors duration-500 text-sm tracking-widest uppercase"
+                    className="text-white/50 lg:hover:text-[#2295f7] transition-colors duration-500 text-sm tracking-widest uppercase"
                   >
                     Twitter
                   </a>
@@ -109,7 +109,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-7">
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
               <div>
                 <label htmlFor="name" className="block text-xs tracking-[0.2em] uppercase text-white/50 mb-3">
                   Your Name *
@@ -121,7 +121,8 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-transparent border-b border-white/20 focus:border-[#2295f7] py-3 text-white text-lg font-light outline-none transition-colors duration-500"
+                  className="w-full bg-transparent border-b border-white/20 focus:border-[#2295f7] py-3 md:py-4 text-white text-base md:text-lg font-light outline-none transition-colors duration-500"
+                  style={{ fontSize: '16px' }}
                 />
               </div>
 
@@ -136,7 +137,8 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-transparent border-b border-white/20 focus:border-[#2295f7] py-3 text-white text-lg font-light outline-none transition-colors duration-500"
+                  className="w-full bg-transparent border-b border-white/20 focus:border-[#2295f7] py-3 md:py-4 text-white text-base md:text-lg font-light outline-none transition-colors duration-500"
+                  style={{ fontSize: '16px' }}
                 />
               </div>
 
@@ -150,7 +152,8 @@ const Contact = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white/20 focus:border-[#2295f7] py-3 text-white text-lg font-light outline-none transition-colors duration-500"
+                  className="w-full bg-transparent border-b border-white/20 focus:border-[#2295f7] py-3 md:py-4 text-white text-base md:text-lg font-light outline-none transition-colors duration-500"
+                  style={{ fontSize: '16px' }}
                 />
               </div>
 
@@ -165,19 +168,20 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="6"
-                  className="w-full bg-transparent border-b border-white/20 focus:border-[#2295f7] py-3 text-white text-lg font-light outline-none transition-colors duration-500 resize-none"
+                  className="w-full bg-transparent border-b border-white/20 focus:border-[#2295f7] py-3 md:py-4 text-white text-base md:text-lg font-light outline-none transition-colors duration-500 resize-none"
                   placeholder="Tell us about your project..."
+                  style={{ fontSize: '16px' }}
                 ></textarea>
               </div>
 
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="group relative inline-flex items-center gap-4 px-8 py-4 border border-[#2295f7] text-[#2295f7] hover:bg-[#2295f7] hover:text-black transition-all duration-500 text-sm tracking-[0.2em] uppercase font-medium"
+                  className="group relative inline-flex items-center gap-4 px-6 md:px-8 py-4 md:py-5 border border-[#2295f7] text-[#2295f7] lg:hover:bg-[#2295f7] lg:hover:text-black transition-all duration-500 text-sm tracking-[0.2em] uppercase font-medium w-full sm:w-auto justify-center"
                 >
                   Send Message
                   <svg 
-                    className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-500" 
+                    className="w-5 h-5 lg:group-hover:translate-x-1 transition-transform duration-500" 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -192,23 +196,23 @@ const Contact = () => {
       </section>
 
       {/* Response Time Section */}
-      <section className="py-24 px-6 md:px-20 lg:px-32 bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <section className="py-16 md:py-20 lg:py-24 px-6 md:px-20 lg:px-32 bg-white/[0.02]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           <div className="text-center md:text-left">
-            <div className="text-5xl font-thin text-[#2295f7] mb-4">1h</div>
-            <p className="text-white/60 font-light">
+            <div className="text-4xl md:text-5xl font-thin text-[#2295f7] mb-3 md:mb-4">1h</div>
+            <p className="text-sm md:text-base text-white/60 font-light">
               Average response time for all inquiries
             </p>
           </div>
           <div className="text-center md:text-left">
-            <div className="text-5xl font-thin text-[#2295f7] mb-4">100%</div>
-            <p className="text-white/60 font-light">
+            <div className="text-4xl md:text-5xl font-thin text-[#2295f7] mb-3 md:mb-4">100%</div>
+            <p className="text-sm md:text-base text-white/60 font-light">
               Client satisfaction and project success rate
             </p>
           </div>
           <div className="text-center md:text-left">
-            <div className="text-5xl font-thin text-[#2295f7] mb-4">3</div>
-            <p className="text-white/60 font-light">
+            <div className="text-4xl md:text-5xl font-thin text-[#2295f7] mb-3 md:mb-4">3</div>
+            <p className="text-sm md:text-base text-white/60 font-light">
               Dedicated experts working on your project
             </p>
           </div>

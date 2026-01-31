@@ -70,20 +70,20 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="min-h-[60vh] flex flex-col justify-center relative pt-32 pb-20 px-6 md:px-20 lg:px-32 border-b border-white/5">
+      <section className="min-h-[60vh] flex flex-col justify-center relative py-16 md:py-24 lg:pt-32 lg:pb-20 px-6 md:px-20 lg:px-32 border-b border-white/5">
         <div className="max-w-7xl w-full mx-auto">
-          <div className="inline-flex items-center gap-3 mb-8">
-            <span className="w-12 h-px bg-[#2295f7]"></span>
-            <span className="text-[#2295f7] text-xs font-bold tracking-[0.2em] uppercase">
+          <div className="inline-flex items-center gap-3 mb-6 md:mb-8">
+            <span className="w-8 md:w-12 h-px bg-[#2295f7]"></span>
+            <span className="text-[#2295f7] text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
               What We Do
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-[0.9] tracking-tight mb-12">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-[0.9] tracking-tight mb-8 md:mb-12">
             COMPREHENSIVE<br />
             <span className="font-normal">DIGITAL</span><br />
             <span className="text-white/40">SERVICES</span>
           </h1>
-          <p className="text-white/60 text-xl font-light max-w-3xl leading-relaxed border-l border-[#2295f7]/30 pl-6">
+          <p className="text-white/60 text-base md:text-lg lg:text-xl font-light max-w-3xl leading-relaxed border-l border-[#2295f7]/30 pl-4 md:pl-6">
             Three core disciplines working in harmony. Each service is designed to complement 
             the others, creating a seamless workflow from concept to launch.
           </p>
@@ -94,43 +94,43 @@ const Services = () => {
       {services.map((service, index) => (
         <section 
           key={service.id}
-          className={`py-32 px-6 md:px-20 lg:px-32 border-b border-white/5 ${index % 2 === 1 ? 'bg-white/[0.02]' : ''}`}
+          className={`py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32 border-b border-white/5 ${index % 2 === 1 ? 'bg-white/[0.02]' : ''}`}
         >
           <div className="max-w-7xl mx-auto">
             {/* Service Header */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-12 md:mb-16">
               <div className="flex-1">
-                <div className="flex items-baseline gap-4 mb-4">
-                  <span className="text-6xl md:text-7xl font-thin text-[#2295f7]">{service.id}</span>
-                  <h2 className="text-4xl md:text-6xl font-thin tracking-tight">{service.title}</h2>
+                <div className="flex items-baseline gap-3 md:gap-4 mb-3 md:mb-4">
+                  <span className="text-5xl md:text-6xl lg:text-7xl font-thin text-[#2295f7]">{service.id}</span>
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-thin tracking-tight">{service.title}</h2>
                 </div>
-                <p className="text-[#2295f7] text-sm tracking-[0.2em] uppercase">{service.tagline}</p>
+                <p className="text-[#2295f7] text-xs md:text-sm tracking-[0.2em] uppercase">{service.tagline}</p>
               </div>
             </div>
 
             {/* Service Description */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16">
               <div className="lg:col-span-5">
-                <p className="text-xl font-light leading-relaxed text-white/80">
+                <p className="text-lg md:text-xl font-light leading-relaxed text-white/80">
                   {service.description}
                 </p>
               </div>
 
-              <div className="lg:col-span-7 space-y-12">
+              <div className="lg:col-span-7 space-y-8 md:space-y-12">
                 {/* Capabilities */}
                 <div>
-                  <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-6 flex items-center gap-3">
-                    <span className="w-8 h-px bg-white/20"></span>
+                  <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-4 md:mb-6 flex items-center gap-3">
+                    <span className="w-6 md:w-8 h-px bg-white/20"></span>
                     Capabilities
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     {service.capabilities.map((capability, idx) => (
                       <div 
                         key={idx}
-                        className="group flex items-start gap-3 p-4 border border-white/10 hover:border-[#2295f7]/50 transition-colors duration-500"
+                        className="group flex items-start gap-3 p-3 md:p-4 border border-white/10 lg:hover:border-[#2295f7]/50 transition-colors duration-500"
                       >
                         <span className="text-[#2295f7] mt-1">→</span>
-                        <span className="text-white/70 font-light group-hover:text-white transition-colors duration-500">
+                        <span className="text-sm md:text-base text-white/70 font-light lg:group-hover:text-white transition-colors duration-500">
                           {capability}
                         </span>
                       </div>
@@ -140,15 +140,15 @@ const Services = () => {
 
                 {/* Deliverables */}
                 <div>
-                  <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-6 flex items-center gap-3">
-                    <span className="w-8 h-px bg-white/20"></span>
+                  <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-4 md:mb-6 flex items-center gap-3">
+                    <span className="w-6 md:w-8 h-px bg-white/20"></span>
                     Deliverables
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 md:space-y-3">
                     {service.deliverables.map((deliverable, idx) => (
                       <li 
                         key={idx}
-                        className="flex items-center gap-3 text-white/60 font-light"
+                        className="flex items-center gap-3 text-sm md:text-base text-white/60 font-light"
                       >
                         <span className="w-1.5 h-1.5 bg-[#2295f7] rounded-full"></span>
                         {deliverable}
@@ -163,13 +163,13 @@ const Services = () => {
       ))}
 
       {/* Process Section */}
-      <section className="py-32 px-6 md:px-20 lg:px-32 border-b border-white/5 bg-white/[0.02]">
+      <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32 border-b border-white/5 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-thin tracking-tight mb-20">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-thin tracking-tight mb-12 md:mb-16 lg:mb-20">
             OUR <span className="text-white/40">PROCESS</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
             {[
               {
                 step: '01',
@@ -193,13 +193,13 @@ const Services = () => {
               }
             ].map((phase, index) => (
               <div key={index} className="relative">
-                <div className="text-5xl font-thin text-[#2295f7]/20 mb-4">{phase.step}</div>
-                <h3 className="text-2xl font-light mb-4 text-white">{phase.title}</h3>
-                <p className="text-white/60 font-light leading-relaxed">{phase.description}</p>
+                <div className="text-4xl md:text-5xl font-thin text-[#2295f7]/20 mb-3 md:mb-4">{phase.step}</div>
+                <h3 className="text-xl md:text-2xl font-light mb-3 md:mb-4 text-white">{phase.title}</h3>
+                <p className="text-sm md:text-base text-white/60 font-light leading-relaxed">{phase.description}</p>
                 
-                {/* Connecting line (except for last item) */}
+                {/* Connecting line (except for last item) - hidden on mobile */}
                 {index < 3 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-px bg-white/10"></div>
+                  <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-white/10"></div>
                 )}
               </div>
             ))}
@@ -208,19 +208,19 @@ const Services = () => {
       </section>
 
       {/* Technology Stack */}
-      <section className="py-32 px-6 md:px-20 lg:px-32 border-b border-white/5">
+      <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32 border-b border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-thin tracking-tight mb-6">
+          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-thin tracking-tight mb-4 md:mb-6">
               TECHNOLOGY <span className="text-white/40">STACK</span>
             </h2>
-            <p className="text-white/60 font-light max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-white/60 font-light max-w-2xl mx-auto px-4">
               We work with modern, battle-tested technologies that deliver performance, 
               scalability, and maintainability.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {[
               'React', 'Next.js', 'Vue.js', 'TypeScript',
               'Node.js', 'Python', 'PostgreSQL', 'MongoDB',
@@ -229,9 +229,9 @@ const Services = () => {
             ].map((tech, index) => (
               <div 
                 key={index}
-                className="group p-6 border border-white/10 hover:border-[#2295f7]/50 transition-colors duration-500 text-center"
+                className="group p-4 md:p-6 border border-white/10 lg:hover:border-[#2295f7]/50 transition-colors duration-500 text-center"
               >
-                <span className="text-white/70 font-light tracking-wide group-hover:text-white transition-colors duration-500">
+                <span className="text-sm md:text-base text-white/70 font-light tracking-wide lg:group-hover:text-white transition-colors duration-500">
                   {tech}
                 </span>
               </div>
@@ -241,15 +241,15 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 md:px-20 lg:px-32">
+      <section className="py-16 md:py-24 lg:py-32 px-6 md:px-20 lg:px-32">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-white/40 text-sm tracking-widest uppercase mb-8">Ready to Start?</p>
-          <h2 className="text-5xl md:text-7xl font-thin tracking-tight text-white mb-12">
+          <p className="text-white/40 text-xs md:text-sm tracking-widest uppercase mb-6 md:mb-8">Ready to Start?</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-thin tracking-tight text-white mb-8 md:mb-12">
             Let's discuss your project
           </h2>
           <a
             href="/contact"
-            className="inline-block text-2xl md:text-3xl text-[#2295f7] border-b border-[#2295f7] pb-1 hover:text-white hover:border-white transition-colors duration-500 font-light"
+            className="inline-block text-xl md:text-2xl lg:text-3xl text-[#2295f7] border-b border-[#2295f7] pb-1 lg:hover:text-white lg:hover:border-white transition-colors duration-500 font-light"
           >
             Get In Touch
           </a>

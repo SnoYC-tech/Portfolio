@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,12 @@ const Contact = () => {
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState({ type: 'idle', message: '' });
+
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const handleChange = (e) => {
     setFormData({
@@ -16,11 +23,46 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add your form submission logic here
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus({
+        type: 'error',
+        message: 'Email service is not configured. Please try again later.'
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setStatus({ type: 'idle', message: '' });
+
+    try {
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company || 'Not provided',
+          message: formData.message,
+          to_name: 'SnoYC Team'
+        },
+        publicKey
+      );
+
+      console.log('EmailJS Response:', response);
+      setStatus({ type: 'success', message: 'Thanks! Your message has been sent.' });
+      setFormData({ name: '', email: '', company: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setStatus({ 
+        type: 'error', 
+        message: error.text || 'Sorry, something went wrong. Please try again.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -97,22 +139,20 @@ const Contact = () => {
                 <h3 className="text-xs tracking-[0.2em] uppercase text-white/50 mb-4">Follow Us</h3>
                 <div className="flex flex-wrap gap-4 md:gap-6">
                   <a 
-                    href="#" 
+                    href="https://www.instagram.com/snoyc.tech/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white/50 lg:hover:text-[#2295f7] transition-colors duration-500 text-sm tracking-widest uppercase"
                   >
                     Instagram
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.linkedin.com/in/snoyc/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white/50 lg:hover:text-[#2295f7] transition-colors duration-500 text-sm tracking-widest uppercase"
                   >
                     LinkedIn
-                  </a>
-                  <a 
-                    href="#" 
-                    className="text-white/50 lg:hover:text-[#2295f7] transition-colors duration-500 text-sm tracking-widest uppercase"
-                  >
-                    Twitter
                   </a>
                 </div>
               </div>
@@ -195,9 +235,10 @@ const Contact = () => {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="group relative inline-flex items-center gap-4 px-6 md:px-8 py-4 md:py-5 border border-[#2295f7] text-[#2295f7] lg:hover:bg-[#2295f7] lg:hover:text-black transition-all duration-500 text-sm tracking-[0.2em] uppercase font-medium w-full sm:w-auto justify-center"
+                  disabled={isSubmitting}
+                  className="group relative inline-flex items-center gap-4 px-6 md:px-8 py-4 md:py-5 border border-[#2295f7] text-[#2295f7] lg:hover:bg-[#2295f7] lg:hover:text-black transition-all duration-500 text-sm tracking-[0.2em] uppercase font-medium w-full sm:w-auto justify-center disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                   <svg 
                     className="w-5 h-5 lg:group-hover:translate-x-1 transition-transform duration-500" 
                     fill="none" 
@@ -207,6 +248,15 @@ const Contact = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </button>
+                {status.message && (
+                  <p
+                    className={`mt-4 text-sm font-light ${status.type === 'success' ? 'text-green-400' : 'text-red-400'}`}
+                    role="status"
+                    aria-live="polite"
+                  >
+                    {status.message}
+                  </p>
+                )}
               </div>
             </form>
           </motion.div>

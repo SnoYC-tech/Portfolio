@@ -19,14 +19,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto mt-32 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-white/20 text-xs tracking-widest uppercase">
         <p>SnoYC © 2026</p>
         <div className="flex gap-8 mt-4 md:mt-0">
-          <a className="hover:text-[#2295f7] transition-colors" href="#">
+          <a className="hover:text-[#2295f7] transition-colors" href="https://www.instagram.com/snoyc.tech/" target="_blank" rel="noopener noreferrer">
             Instagram
           </a>
-          <a className="hover:text-[#2295f7] transition-colors" href="#">
+          <a className="hover:text-[#2295f7] transition-colors" href="https://www.linkedin.com/in/snoyc/" target="_blank" rel="noopener noreferrer">
             LinkedIn
-          </a>
-          <a className="hover:text-[#2295f7] transition-colors" href="#">
-            Twitter
           </a>
         </div>
       </div>

@@ -81,7 +81,7 @@ const Sidebar = () => {
                   : 'text-white/80'
               }`}
             >
-              <span className="text-xs font-medium tracking-widest uppercase">02</span>
+              <span className="text-xs font-medium tracking-widest uppercase">03</span>
               <span className="text-base tracking-widest uppercase">Services</span>
             </Link>
             <Link

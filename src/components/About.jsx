@@ -6,15 +6,15 @@ const About = () => {
         {
             name: "Shubham",
             role: "CEO",
-            bio: "Visual storyteller merging art and function. Crafts interfaces that speak louder than words.",
-            expertise: ["UI Design", "Motion Graphics", "3D Visualization"],
+            bio: "Visionary leader driving digital excellence. Founded the studio to transform businesses through strategic web solutions and innovative technology.",
+            expertise: ["Digital Strategy", "Business Development", "Web Architecture"],
             image: "/Team/Shubham.webp"
         },
         {
-            name: "Atharv",
+            name: "Atharva",
             role: "CFO",
-            bio: "10+ years shaping digital experiences. Previously led design at major tech firms before founding the studio.",
-            expertise: ["Strategy", "Brand Identity", "User Experience"],
+            bio: "Strategic financial leader ensuring sustainable growth and operational excellence. Drives business efficiency while maintaining quality standards.",
+            expertise: ["Financial Strategy", "Business Operations", "Project Management"],
             image: "/Team/Atharv.webp"
         },
         {
@@ -23,6 +23,20 @@ const About = () => {
             bio: "Full-stack architect with a passion for performance. Builds systems that scale seamlessly and elegantly.",
             expertise: ["React", "Node.js", "Cloud Architecture"],
             image: "/Team/Devendra.webp"
+        },
+        {
+            name: "Ajinkya",
+            role: "Developer",
+            bio: "Innovative problem solver with a keen eye for detail. Transforms complex challenges into elegant solutions.",
+            expertise: ["JavaScript", "React", "API Development"],
+            image: "/Team/Ajinkya.webp"
+        },
+        {
+            name: "Saleel",
+            role: "Developer",
+            bio: "Creative developer passionate about building seamless user experiences. Brings ideas to life with clean code.",
+            expertise: ["Frontend", "UI/UX", "Performance"],
+            image: "/Team/Saleel.webp"
         }
     ];
 
@@ -119,17 +133,6 @@ const About = () => {
                                     }
                                 }}
                             >
-                                {/* Profile Image */ }
-                                <div className="w-full aspect-square bg-neutral-900 relative overflow-hidden mb-4 md:mb-6 border border-white/10 lg:group-hover:border-[#2295f7]/50 transition-colors duration-700">
-                                    <img
-                                        src={ member.image }
-                                        alt={ member.name }
-                                        className="w-full h-full object-cover grayscale lg:group-hover:grayscale-0 transition-all duration-700"
-                                    />
-                                    {/* Overlay on hover */ }
-                                    <div className="absolute inset-0 bg-[#2295f7]/0 lg:group-hover:bg-[#2295f7]/10 transition-all duration-700"></div>
-                                </div>
-
                                 {/* Member Info */ }
                                 <div className="flex flex-col gap-2 md:gap-3">
                                     <h3 className="text-xl md:text-2xl font-light lg:group-hover:text-[#2295f7] transition-colors duration-500">

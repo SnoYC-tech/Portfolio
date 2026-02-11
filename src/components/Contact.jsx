@@ -285,7 +285,7 @@ const Contact = () => {
             </p>
           </div>
           <div className="text-center md:text-left">
-            <div className="text-4xl md:text-5xl font-thin text-[#2295f7] mb-3 md:mb-4">3</div>
+            <div className="text-4xl md:text-5xl font-thin text-[#2295f7] mb-3 md:mb-4">5</div>
             <p className="text-sm md:text-base text-white/60 font-light">
               Dedicated experts working on your project
             </p>

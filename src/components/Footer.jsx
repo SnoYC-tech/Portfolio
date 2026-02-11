@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -8,12 +9,12 @@ const Footer = () => {
         <h2 className="text-5xl md:text-8xl font-thin tracking-tight text-white mb-12">
           Ready to build?
         </h2>
-        <a
+        <Link
           className="inline-block text-2xl md:text-3xl text-[#2295f7] border-b border-[#2295f7] pb-1 hover:text-white hover:border-white transition-colors duration-500 font-light"
-          href="/contact"
+          to="/contact"
         >
           Initiate Project
-        </a>
+        </Link>
       </div>
       
       <div className="max-w-7xl mx-auto mt-32 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-white/20 text-xs tracking-widest uppercase">

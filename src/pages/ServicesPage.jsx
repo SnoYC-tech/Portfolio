@@ -6,7 +6,7 @@ const ServicesPage = () => {
   return (
     <>
       <Services />
-      <Footer />
+      <Footer hideCTA={true} />
     </>
   );
 };
